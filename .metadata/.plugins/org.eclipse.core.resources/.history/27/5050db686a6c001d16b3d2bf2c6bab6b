@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Index page</title>
+</head>
+<body>
+	<div th:object="${nv}" )>
+		<p>
+			Họ và tên: <span th:text="*{name}"></span>
+		</p>
+		<p>
+			Địa chỉ: <span th:text="*{address}"></span>
+		</p>
+		<p>
+			Số điện thoại: <span th:utext="*{phone}"></span>
+		</p>
+		<p>
+			Tuổi: <span th:text="*{age}"></span>
+		</p>
+
+	</div>
+	<h2>Danh sach mot list</h2>
+	<div th:each="item : ${list}">
+		<span th:text="*{item}"></span>
+	</div>
+	<h2>Thông báo</h2>
+	<div>Xin chào thứ 6</div>
+	<div >Xin chào thứ 6</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+package com.vuong.SQLSV.Controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.vuong.SQLSV.Mode.NhanVien;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class HomeController {
+	@GetMapping("/")
+	public String index(Model mode) {
+		NhanVien nv = new NhanVien("Nhan vien 1", "Ha Noi", "0866859213", 28);
+		List<String> l = new ArrayList<String>();
+		l.add("xin chao");
+		l.add("toi ten la");
+		l.add("toi den tu viet nam");
+		mode.addAttribute("nv", nv);
+		mode.addAttribute("list", l);
+		return "index";
+	}
+}

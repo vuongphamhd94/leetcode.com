@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="WebNetFlix"/>
+<aop-project name="Web01"/>
+<aop-project name="SQLSC"/>
+<aop-project name="DemoSpringBoot"/>
+</aop-reference-model>

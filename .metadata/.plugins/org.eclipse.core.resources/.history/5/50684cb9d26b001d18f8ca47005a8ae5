@@ -1,0 +1,36 @@
+package com.vuong.Web01;
+
+import java.util.List;
+
+import com.vuong.Web01.Model.User;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.web.reactive.function.client.WebClientAutoConfiguration;
+import org.springframework.web.reactive.function.client.WebClient;
+import org.springframework.web.servlet.mvc.method.RequestMappingInfo.Builder;
+
+@SpringBootApplication
+public class Web01Application {
+
+	public static void main(String[] args) {
+		SpringApplication.run(Web01Application.class, args);
+		
+		
+		String url = "http://localhost:8080/user";
+		
+		WebClient.Builder builer = WebClient.builder();
+		User users = builer.build()
+				.get()
+				.uri(url)
+				.retrieve()
+				.bodyToMono(User.class)
+				.block();
+		
+		System.out.println(users.getName());
+		
+		
+		
+	}
+
+}

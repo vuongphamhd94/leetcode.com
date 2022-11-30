@@ -1,0 +1,7 @@
+package Easy;
+
+public class ID05 {
+	public static void main(String[] args) {
+System.out.println("sdsanc".substring("sdsanc".charAt(0)));
+	}
+}

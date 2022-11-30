@@ -1,0 +1,6 @@
+server.port = 8081
+
+Spring.datasource.driverClassName=com.microsoft.sqlserver.jdbc.SQLServerDriver
+Spring.datasource.url=jdbc:sqlserver://localhost:1433;databaseName=DBNetFlix;encrypt=true;trustServerCertificate=true;sslProtocol=TLSv1.2
+Spring.datasource.username=sa
+Spring.datasource.password=123456

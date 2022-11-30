@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;Easy.ID6&apos; to &apos;ID06&apos;&#x0D;&#x0A;- Original project: &apos;LeetCode&apos;&#x0D;&#x0A;- Original element: &apos;Easy.ID6&apos;&#x0D;&#x0A;- Renamed element: &apos;Easy.ID06&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;ID6&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;Easy{ID6.java[ID6" matchStrategy="1" name="ID06" qualified="false" references="true" similarDeclarations="false" stamp="1669800040520" textual="false" version="1.0"/>
+</session>

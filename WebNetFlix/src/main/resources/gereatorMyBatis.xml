@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+
+  <context id="DB2Tables" targetRuntime="MyBatis3">
+    <jdbcConnection driverClass="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+        connectionURL="jdbc:sqlserver://localhost:1433;databaseName=DBNetFlix;encrypt=true;trustServerCertificate=true;sslProtocol=TLSv1.2"
+        userId="sa"
+        password="123456">
+    </jdbcConnection>
+
+    <javaTypeResolver >
+      <property name="forceBigDecimals" value="false" />
+    </javaTypeResolver>
+
+    <javaModelGenerator targetPackage="com.vuong.WebNextFlix.Mode" targetProject="WebNetFlix/src/main/java"/>
+
+    <sqlMapGenerator targetPackage="com.vuongpham.WebNetFlix.mapper.sql"  targetProject="WebNetFlix/src/main/resources"/>
+
+
+    <javaClientGenerator type="XMLMAPPER" targetPackage="com.vuong.WebNextFlix.Mapper"  targetProject="WebNetFlix/src/main/java"/>
+
+
+    <table tableName="Users" domainObjectName="Users" >
+      
+    </table>
+
+  </context>
+</generatorConfiguration>

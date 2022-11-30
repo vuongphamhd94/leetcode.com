@@ -1,0 +1,13 @@
+package Easy;
+
+public class ID03 {
+	public static int lengthOfLongestSubstring(String s) {
+		if (s.length() <= 1)
+			return s.length();
+
+		int max = 0;
+		int n = s.length() -1;
+		
+		return max;
+	}
+}

@@ -1,0 +1,16 @@
+<!DOCTYPE html> 
+<html xmlns:th="www.t"> 
+<head> 
+	<title>Index page</title> 
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+	<meta name="viewport" 
+		content="width=device-width, initial-scale=1" /> 
+</head> 
+<body> 
+	<h1 th:text="${title}"></h1>
+	<form action="/home" method="post">
+		<label id="name">Name:</label>
+		<input id="input-1" placeholder="Text" type="text"/>
+	</form>
+</body> 
+</html>

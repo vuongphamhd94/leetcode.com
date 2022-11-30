@@ -1,0 +1,9 @@
+server.port = 8081
+
+spring.datasource.driverClassName=com.microsoft.sqlserver.jdbc.SQLServerDriver
+spring.datasource.url=jdbc:sqlserver://localhost:1433;databaseName=WebNew;encrypt=true;trustServerCertificate=true;sslProtocol=TLSv1.2
+spring.datasource.username=sa
+spring.datasource.password=123456
+
+#Spring.jpa.hibernate.ddl-auto = none
+spring.jpa.hibernate.ddl-auto = create-drop

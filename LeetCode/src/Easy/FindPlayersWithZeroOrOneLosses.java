@@ -1,0 +1,63 @@
+package Easy;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class FindPlayersWithZeroOrOneLosses {
+	public static List<List<Integer>> findWinners(int[][] matches) {
+		List<List<Integer>> rs = new ArrayList<List<Integer>>();
+		List<Integer> winner = new ArrayList<Integer>();
+		List<Integer> lose = new ArrayList<Integer>();
+		int n = matches.length;
+		int max = n*2+1;
+		
+		for(int i = 0; i < n; i++) {
+			for(int j = 0 ; j < 2; j++) {
+				if(max < matches[i][j])
+					max = matches[i][j];
+			}
+		}
+		
+		int[] arr = new int[max+1];
+		for (int i = 0; i < n; i++) {
+			int indexW = matches[i][0];
+			int indexL = matches[i][1];
+			
+			if(arr[indexW] >= 0) {
+				arr[indexW]++;
+			}
+			
+			if(arr[indexL] > 0) {
+				arr[indexL] = -1;
+			}else {
+				arr[indexL]--;
+			}
+		}
+		for(int i = 1; i < arr.length;i++) {
+			if(arr[i] > 0) {
+				winner.add(i);
+			}else if(arr[i] == -1) {
+				lose.add(i);
+			}
+		}
+		rs.add(winner);
+		rs.add(lose);
+		return rs;
+	}
+	
+	public static void main(String[] args) {
+		int[][] a = new int[][] {
+			{2,3},{1,3},{5,4},{6,4}
+		};
+		
+		List<List<Integer>> b = findWinners(a);
+		for(List<Integer> r : b) {
+			for(int item: r) {
+				System.out.print(item + ", ");
+			}
+			System.out.println();
+		}
+	}
+	
+	
+}

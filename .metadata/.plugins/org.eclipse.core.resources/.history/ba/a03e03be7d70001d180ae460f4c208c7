@@ -1,0 +1,44 @@
+package Easy;
+
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
+
+public class AddTowNumbers {
+	public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+		int soDu = 0;
+		int n1 = l1 != null? l1.val : 0;
+		int n2 = l2!= null? l2.val : 0;
+		int n = (n1 + n2 + soDu) %10;
+		soDu = (n1 + n2 + soDu) /10;
+		
+		ListNode rs = new ListNode();
+
+		return rs;
+
+	}
+
+	public static void main(String[] args) {
+		int[] arr1 = new int[] { 2, 4, 9 };
+		int[] arr2 = new int[] { 5, 6, 4, 9 };
+		
+		ListNode a = new ListNode(arr1[0]);
+		ListNode a1 = a;
+		for(int i = 1; i < arr1.length; i++) {
+			a1.next = new ListNode(arr1[i]);
+			a1 = a1.next;
+		}
+		ListNode b = new ListNode(arr2[0]);
+		ListNode b1 = b;
+		for(int i = 1; i < arr2.length; i++) {
+			b1.next = new ListNode(arr2[i]);
+			b1 = b1.next;
+		}
+
+		ListNode rs = addTwoNumbers(a, b);
+		while (rs != null) {
+			System.out.println(rs.val);
+			rs = rs.next;
+		}
+	}
+}

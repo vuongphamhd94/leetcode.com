@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Tue Nov 29 16:47:26 ICT 2022
+org.eclipse.jst.j2ee.server\:/binary\:C\:\\Users\\VUONG\ PHAM\\.gradle\\caches\\modules-2\\files-2.1\\org.springframework\\spring-web\\5.3.24\\d89bbcaabb1ff247a089875cbc4211bfe96c9a59\\spring-web-5.3.24.jar=WEB-INF/lib/spring-web-5.3.24.jar
+org.eclipse.jst.j2ee.server\:/binary\:C\:\\Users\\VUONG\ PHAM\\.gradle\\caches\\modules-2\\files-2.1\\org.springframework\\spring-web\\5.3.23\\193f5276092d9cbe3222c63885b47ca7b2cce97\\spring-web-5.3.23.jar=WEB-INF/lib/spring-web-5.3.23.jar

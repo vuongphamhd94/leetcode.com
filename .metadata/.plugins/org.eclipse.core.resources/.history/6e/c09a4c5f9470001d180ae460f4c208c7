@@ -1,0 +1,33 @@
+package Easy;
+
+public class ID06 {
+	public String convert(String s, int numRows) {
+		if(numRows == 1)
+			return s;
+		
+		int sL = s.length();
+		String rs = "";
+		// cac dong
+		for(int i = 0; i < numRows; i++) {
+			// gia tri dau tien cua dong
+			int j = i;
+			//truong hop la dong dau tien hoac dong cuoi
+			if(j == 0 || j == numRows - 1) {
+				while(j < numRows) {
+					rs += s.charAt(j);
+					j += 2*numRows -2;
+				}
+				continue;
+			}
+			// truong hop la ca dong o giua
+			while(j < numRows) {
+				rs += s.charAt(j);
+				if((j / 2) % 2 == 0)
+					j+=(numRows - i - 1) * 2;
+			}
+			
+		}
+		
+		return null;
+	}
+}

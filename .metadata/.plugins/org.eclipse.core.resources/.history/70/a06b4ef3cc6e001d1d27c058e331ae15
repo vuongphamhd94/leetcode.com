@@ -1,0 +1,32 @@
+package Easy;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class FindPlayersWithZeroOrOneLosses {
+	public List<List<Integer>> findWinners(int[][] matches) {
+		List<List<Integer>> rs = new ArrayList<List<Integer>>();
+		List<Integer> winner = new ArrayList<Integer>();
+		List<Integer> lose = new ArrayList<Integer>();
+		int n = matches.length;
+		int[] arr = new int[n * 2 + 1];
+		for (int i = 0; i < n; i++) {
+			int indexW = matches[i][0];
+			int indexL = matches[i][1];
+			
+			if(arr[indexW] >= 0) {
+				arr[indexW]++;
+			}
+			
+			if(arr[indexL] > 0) {
+				arr[indexL] = -1;
+			}else {
+				arr[indexL]--;
+			}
+		}
+		for(int i = 1; i < arr.length;i++) {
+			
+		}
+		return rs;
+	}
+}

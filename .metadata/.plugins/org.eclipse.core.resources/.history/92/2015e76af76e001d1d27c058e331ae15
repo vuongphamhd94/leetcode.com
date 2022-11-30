@@ -1,0 +1,7 @@
+package Easy;
+
+public class SeachInsertPosition {
+	public int searchInsert(int[] nums, int target) {
+
+	}
+}
