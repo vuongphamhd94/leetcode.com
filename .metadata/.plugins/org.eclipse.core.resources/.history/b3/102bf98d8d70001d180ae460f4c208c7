@@ -1,0 +1,32 @@
+package Easy;
+
+public class ID05 {
+	public static String longestPalindrome(String s) {
+		char[] arrS = new char[s.length()];
+		int max = 1;
+		String rs = s.substring(0, 1);
+		for (int i = 0; i < s.length(); i++) {
+			int j;
+			for (j = s.length() - 1; j > i; j--) {
+				if (s.charAt(i) == s.charAt(j) && j - i + 1 > max) {
+					int n = (j - i) / 2;
+					int k;
+					for (k = 0; k <= n; k++)
+						if (s.charAt(i + k) != s.charAt(j - k))
+							break;
+
+					if (k > n) {
+						max = j - i + 1;
+						rs = s.substring(i, j + 1);
+					}
+				}
+			}
+		}
+
+		return rs;
+	}
+
+	public static void main(String[] args) {
+		System.out.println(longestPalindrome("ab"));
+	}
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="www.t">
+<head>
+<title>Index page</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+	<h1 th:text="${title}"></h1>
+	<form action="/home" method="post">
+		<div>
+			<label id="name">Name:</label> 
+			<input id="name" placeholder="Text"
+				type="text" name="name" value="${name}"/>
+		</div>
+		<div>
+			<label for="age">Input:</label>
+			<input id="age" placeholder="Text" name="age" type="text"/>
+		</div>
+		<button type="submit">Submit</button>
+	</form>
+</body>
+</html>

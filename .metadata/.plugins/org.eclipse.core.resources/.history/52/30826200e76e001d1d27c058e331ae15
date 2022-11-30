@@ -1,0 +1,32 @@
+package Easy;
+
+import java.util.HashMap;
+import java.util.Stack;
+
+public class ValidParentheses {
+	public static boolean isValid(String s) {
+		if (s.length() % 2 == 1)
+			return false;
+		HashMap<Character, Integer> hashMap = new HashMap<Character, Integer>();
+		hashMap.put('(', 1);
+		hashMap.put(')', 2);
+		hashMap.put('{', 3);
+		hashMap.put('}', 4);
+		hashMap.put('[', 5);
+		hashMap.put(']', 6);
+		Stack<Character> stack = new Stack<Character>();
+		
+		
+		for(int i = 0; i < s.length(); i+=2) {
+			if(hashMap.get(s.charAt(i))%2==0 || 
+					hashMap.get(s.charAt(i)) +1 != hashMap.get(s.charAt(i+1)))
+				return false;
+		}
+		
+		return true;
+	}
+
+	public static void main(String[] args) {
+		System.out.println(isValid("()[]{}"));
+	}
+}

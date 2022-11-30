@@ -1,0 +1,29 @@
+package Easy;
+
+public class RemoveDuplicatesfromSortedArray {
+	public int removeDuplicates(int[] nums) {
+		if (nums.length == 0)
+			return 0;
+
+		int max = nums[0];
+		for (int i : nums)
+			max = max < i ? i : max;
+
+		int[] arr = new int[max + 1];
+		int count = 0;
+
+		for (int i : nums)
+			if (arr[nums[i]] == 0) {
+				count++;
+				arr[nums[i]] = 1;
+			}
+
+		return count;
+	}
+
+	public static void main(String[] args) {
+		RemoveDuplicatesfromSortedArray d = new RemoveDuplicatesfromSortedArray();
+		int[] a = new int[] { 1, 1, 2 };
+		System.out.println(d.removeDuplicates(a));
+	}
+}

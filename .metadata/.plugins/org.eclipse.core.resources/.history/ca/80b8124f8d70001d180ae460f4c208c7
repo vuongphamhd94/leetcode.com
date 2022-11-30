@@ -1,0 +1,15 @@
+package Easy;
+
+public class ID05 {
+	public static String longestPalindrome(String s) {
+		char[] arrS = new char[s.length()];
+		int max = 1;
+		String rs = s.substring(0, 1);
+
+		return null;
+	}
+
+	public static void main(String[] args) {
+		System.out.println("sa".substring(0, 1));
+	}
+}

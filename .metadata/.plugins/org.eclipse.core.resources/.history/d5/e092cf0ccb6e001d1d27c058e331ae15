@@ -1,0 +1,12 @@
+package Easy;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class FindPlayersWithZeroOrOneLosses {
+public List<List<Integer>> findWinners(int[][] matches) {
+	List<List<Integer>> rs = new ArrayList<List<Integer>>();
+	
+	return rs;
+    }
+}

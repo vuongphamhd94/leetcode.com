@@ -1,0 +1,7 @@
+package com.vuong.SQLSV.Entity;
+
+
+@Entity
+public class UserEntity {
+
+}

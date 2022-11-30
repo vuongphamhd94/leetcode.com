@@ -1,0 +1,30 @@
+package Easy;
+
+public class AddBinary {
+	public String addBinary(String a, String b) {
+		String rs = "";
+		int soDu = 0;
+		if(a.length() > b.length())
+			for(int i = 0; i < a.length() - b.length(); i++)
+				b= 0 + b;
+		else
+			for(int i = 0; i < b.length() - a.length(); i++)
+				a = 0 + a;
+		
+		for(int i = a.length() -1; i >= 0; i--) {
+			int nA = a.charAt(i) - '0';
+			int nB = b.charAt(i) - '0';
+			rs = (nA + nB + soDu)%2 + rs;
+			soDu = (nA + nB + soDu)/2;
+		}
+		if(soDu != 0)
+			rs = soDu + rs;
+		return rs;
+	}
+	
+	public static void main(String[] args) {
+		AddBinary ab = new AddBinary();
+		
+		System.out.println(ab.addBinary("1010", "1011"));
+	}
+}

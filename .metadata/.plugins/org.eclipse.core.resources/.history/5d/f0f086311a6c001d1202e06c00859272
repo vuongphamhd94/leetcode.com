@@ -1,0 +1,19 @@
+package com.vuong.SQLSV.Entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "user")
+public class UserEntity extends BaseEntyti {
+	@Column(name = "userName")
+	private String userName;
+	@Column(name = "password")
+	private String password;
+	@Column(name = "fullName")
+	private String fullName;
+	@Column(name = "status")
+	private Integer status;
+	
+}

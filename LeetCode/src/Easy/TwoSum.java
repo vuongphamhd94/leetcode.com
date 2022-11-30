@@ -1,0 +1,41 @@
+package Easy;
+
+public class TwoSum {
+	public static int[] twoSum(int[] nums, int target) {
+		int [] rs = new int [2];
+		int length = nums.length;
+		for(int i = 0; i < length; i++ ) {
+//			
+//			if(nums[i] > target)
+//				continue;
+			
+			for(int j = i +1; j < length; j++) {
+				if(nums[i] + nums[j] == target) {
+					rs[0] = i;
+					rs[1] = j;
+					return rs;
+				}
+			}
+		}
+		return null;
+	}
+	
+	public static void main(String[] args) {
+		int[] nums = new int[] {
+				-1,-2,-3,-4,-5
+		};
+		
+		int target = -8;
+		
+		int[] a = twoSum(nums, target);
+		
+		if(a != null) {
+			for(int i : a) {
+				System.out.println(i);
+			}
+		}
+		else {
+			System.out.println("null");
+		}
+	}
+}

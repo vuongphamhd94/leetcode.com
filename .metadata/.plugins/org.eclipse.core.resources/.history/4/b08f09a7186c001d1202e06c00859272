@@ -1,0 +1,11 @@
+package com.vuong.SQLSV.Entity;
+
+import java.util.Date;
+
+public class BaseEntyti {
+	private Long id;
+	private String createdBy;
+	private Date createdDate;
+	private String modifiedBy;
+	private Date modifiedDate;
+}

@@ -1,0 +1,9 @@
+package Easy;
+
+public class ID06 {
+	public String convert(String s, int numRows) {
+		
+		
+		return null
+	}
+}

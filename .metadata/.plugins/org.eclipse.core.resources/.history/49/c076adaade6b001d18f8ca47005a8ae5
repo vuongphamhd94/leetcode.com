@@ -1,0 +1,13 @@
+<html>
+<head>
+
+</head>
+<body>
+<div>
+<p>Name <span th:text="${name}"></span>
+</div>
+<div>
+<p>Age <span th:text="${age}"></span>
+</div>
+</body>
+</html>

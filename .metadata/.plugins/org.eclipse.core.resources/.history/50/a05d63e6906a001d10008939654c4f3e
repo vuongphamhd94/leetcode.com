@@ -1,0 +1,50 @@
+package com.vuong.WebDemo.Controllers;
+
+import com.vuong.WebDemo.Models.Configuration_Bean;
+import com.vuong.WebDemo.Models.Configurations;
+import com.vuong.WebDemo.Models.Dongvat;
+import com.vuong.WebDemo.Models.User;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.boot.SpringApplication;
+import org.springframework.context.ApplicationContext;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+@Controller
+@ResponseBody
+
+public class HomeController {
+	@Autowired
+	User user;
+	
+	@Autowired
+	@Qualifier("conLon")
+	Dongvat dv1;
+	
+	@Autowired
+	@Qualifier("chim")
+	Dongvat dv2;
+	
+
+	@GetMapping("/")
+	public String Index() {
+		return "Day la tra index";
+	}
+
+	@GetMapping({"/home","/trangchu"})
+	public String Home() {
+		String rs = dv1.Ten() + " " + dv1.SoChan();
+		rs += "\n 1 - " + dv2.Ten() + " " + dv2.SoChan();
+		return rs;
+	}
+	@Autowired
+	Configurations b;
+	@GetMapping("/configuration")
+	public String Demo2() {
+		return b.hello();
+		
+	}
+}

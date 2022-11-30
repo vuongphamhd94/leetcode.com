@@ -1,0 +1,11 @@
+package Easy;
+
+public class ID05 {
+	public static String longestPalindrome(String s) {
+
+	}
+
+	public static void main(String[] args) {
+
+	}
+}

@@ -1,0 +1,17 @@
+package com.vuong.SQLSV.Controller;
+
+import com.vuong.SQLSV.Mode.NhanVien;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class HomeController {
+	@GetMapping("/")
+	public String index(Model mode) {
+		NhanVien nv = new NhanVien("Nhan vien 1", "Ha Noi", "0866859213", 28);
+		mode.addAttribute("nv", nv);
+		return "index";
+	}
+}

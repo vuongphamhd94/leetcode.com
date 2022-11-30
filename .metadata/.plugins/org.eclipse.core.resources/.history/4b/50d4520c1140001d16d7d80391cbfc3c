@@ -1,0 +1,40 @@
+package MAXSYMST;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) throws FileNotFoundException {
+		System.setIn(new FileInputStream("input.txt"));
+		Scanner sc = new Scanner(System.in);
+		int T = sc.nextInt();
+		for(int tc = 1; tc <= T; tc++) {
+			String text = sc.next();
+			int l = text.length();
+			boolean check = false;
+			int max;
+			for(int i = l; i > 0; i--) {
+				if(check)
+					break;
+				
+				max = i;
+				
+				for(int j = 0; j < l - i + 1 ; j++) {
+					String rv = "";
+					String subStr = text.substring(j, j + i);
+					char[] arr = subStr.toCharArray();
+					for(int k = i - 1; k >= 0; k--)
+						rv += arr[k];
+					if(rv.equals(subStr)) {
+						check = true;
+						break;
+					}
+				}
+			}
+			
+			System.out.println("#" + tc + " " + max);
+			
+		}
+	}
+}

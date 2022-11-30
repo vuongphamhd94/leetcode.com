@@ -1,0 +1,7 @@
+package Easy;
+
+public class ID07 {
+public static int reverse(int x) {
+        
+    }
+}

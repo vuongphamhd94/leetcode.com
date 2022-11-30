@@ -1,0 +1,14 @@
+package com.vuong.Web01.Controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class TestController {
+@GetMapping("/")
+public String Index(Model mode) {
+	mode.addAttribute("message","Xin chao");
+	return "Index";
+}
+}

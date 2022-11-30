@@ -1,0 +1,5 @@
+package com.vuong.Web01.Model;
+
+public class User {
+
+}

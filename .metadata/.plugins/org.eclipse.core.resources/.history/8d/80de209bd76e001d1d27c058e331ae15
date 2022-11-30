@@ -1,0 +1,20 @@
+package Easy;
+
+public class LongestCommonPrefix {
+	public String longestCommonPrefix(String[] strs) {
+		String rs = "";
+		if(strs.length == 0)
+			return rs;
+		else if(strs.length == 1)
+			return strs[0];
+		
+		int lmin = strs[0].length();
+		for(String s : strs)
+			if(s.length()<lmin)
+				lmin = s.length();
+		
+		
+		
+		return rs;
+	}
+}

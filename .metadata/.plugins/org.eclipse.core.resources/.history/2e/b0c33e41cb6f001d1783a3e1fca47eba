@@ -1,0 +1,22 @@
+package Easy;
+
+public class LengthOfLastWord {
+	public int lengthOfLastWord(String s) {
+		s = s.trim();
+		if(s.isEmpty())
+			return 0;
+		
+		int lastSpaces = s.lastIndexOf(' ');
+//		if(lastSpaces <0)
+//			return 0;
+		
+		String lastWord = s.substring(lastSpaces + 1);
+		return lastWord.length();
+	}
+	
+	public static void main(String[] args) {
+		LengthOfLastWord l = new LengthOfLastWord();
+		
+		System.out.println(l.lengthOfLastWord("   s  "));
+	}
+}

@@ -1,0 +1,5 @@
+package com.vuong.SQLSV.Config;
+
+public class SpringWebConfig {
+
+}

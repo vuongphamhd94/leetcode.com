@@ -1,0 +1,26 @@
+package com.vuong.Web01.Controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.vuong.Web01.Model.User;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class HomeController {
+	private List<User> list = new ArrayList<User>();
+	@GetMapping("/user")
+	public List<User> index() {
+		
+		return list;
+	}
+	@PostMapping("/user")
+	public User cerate(@RequestBody User model) {
+		list.add(model);
+		return model;
+	}
+}
