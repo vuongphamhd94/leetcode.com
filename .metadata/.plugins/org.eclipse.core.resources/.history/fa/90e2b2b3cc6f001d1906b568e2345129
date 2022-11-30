@@ -1,0 +1,10 @@
+package Easy;
+
+public class PlusOne {
+	public int[] plusOne(int[] digits) {
+		int n = digits.length;
+		
+		
+		return 1;
+	}
+}

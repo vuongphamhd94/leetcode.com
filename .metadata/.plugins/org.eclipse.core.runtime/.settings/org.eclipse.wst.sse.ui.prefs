@@ -1,0 +1,8 @@
+content_assist_number_of_computers=23
+content_assist_parameters_foreground=128,128,128
+content_assist_proposals_foreground=128,128,128
+eclipse.preferences.version=1
+hoverModifiers=combinationHover|true|0;problemHover|false|0;documentationHover|false|0;annotationHover|true|Shift;
+matchingBracketsColor=0,0,0
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

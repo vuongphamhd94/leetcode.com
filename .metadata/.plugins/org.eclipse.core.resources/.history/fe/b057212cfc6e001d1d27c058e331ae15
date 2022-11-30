@@ -1,0 +1,44 @@
+package Easy;
+
+public class SeachInsertPosition {
+	public int searchInsert(int[] nums, int target) {
+
+		int l = 0;
+		int r = nums.length;
+		int m = 0;
+		while (l <= r) {
+			if (r == 0)
+				return 0;
+
+			if (l == nums.length)
+				return nums.length;
+
+			m = (l + r) / 2;
+
+			if (m == nums.length -1) {
+				if (nums[nums.length -1] < target)
+					return nums.length;
+			}else if(m == 0) {
+				
+			}
+				
+				else {
+				if (nums[m] >= target)
+					r = m;
+				else if(nums[m +1 ]<target)
+					l = m + 1;
+				else 
+					return m;
+			}
+		}
+
+		return m;
+	}
+
+	public static void main(String[] args) {
+		SeachInsertPosition s = new SeachInsertPosition();
+		int[] a = new int[] { 1, 3, 5, 6 };
+		
+		System.out.println(s.searchInsert(a,5));
+	}
+}
